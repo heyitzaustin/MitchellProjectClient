@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50748/ClaimsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MitchellProject" />
+  <xs:element name="CreateClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MitchellProject" minOccurs="0" name="claim" nillable="true" type="q1:Claim" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateClaimResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateClaimFromXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlddoc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateClaimFromXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateClaimFromXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testSQL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="i" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testSQLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="testSQLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testXML">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="testXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="readClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="claimnumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="readClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="readClaimResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="claimnumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deleteClaimResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="readVehicleFromClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="claimnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehicle_vin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="readVehicleFromClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="readVehicleFromClaimResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

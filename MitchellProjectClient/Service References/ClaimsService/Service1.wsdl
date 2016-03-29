@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50748/ClaimsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50748/ClaimsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50748/ClaimsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MitchellProject" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ClaimsService_CreateClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateClaim" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_CreateClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_CreateClaimFromXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateClaimFromXML" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_CreateClaimFromXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateClaimFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_testSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:testSQL" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_testSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_testXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:testXML" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_testXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_readClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:readClaim" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_readClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_deleteClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteClaim" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_deleteClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_readVehicleFromClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:readVehicleFromClaim" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_readVehicleFromClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readVehicleFromClaimResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ClaimsService">
+    <wsdl:operation name="CreateClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/CreateClaim" message="tns:ClaimsService_CreateClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/CreateClaimResponse" message="tns:ClaimsService_CreateClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateClaimFromXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/CreateClaimFromXML" message="tns:ClaimsService_CreateClaimFromXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/CreateClaimFromXMLResponse" message="tns:ClaimsService_CreateClaimFromXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/testSQL" message="tns:ClaimsService_testSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/testSQLResponse" message="tns:ClaimsService_testSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/testXML" message="tns:ClaimsService_testXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/testXMLResponse" message="tns:ClaimsService_testXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/readClaim" message="tns:ClaimsService_readClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/readClaimResponse" message="tns:ClaimsService_readClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/deleteClaim" message="tns:ClaimsService_deleteClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/deleteClaimResponse" message="tns:ClaimsService_deleteClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readVehicleFromClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/readVehicleFromClaim" message="tns:ClaimsService_readVehicleFromClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/readVehicleFromClaimResponse" message="tns:ClaimsService_readVehicleFromClaim_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ClaimsService" type="tns:ClaimsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateClaim">
+      <soap:operation soapAction="http://tempuri.org/ClaimsService/CreateClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateClaimFromXML">
+      <soap:operation soapAction="http://tempuri.org/ClaimsService/CreateClaimFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testSQL">
+      <soap:operation soapAction="http://tempuri.org/ClaimsService/testSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testXML">
+      <soap:operation soapAction="http://tempuri.org/ClaimsService/testXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readClaim">
+      <soap:operation soapAction="http://tempuri.org/ClaimsService/readClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteClaim">
+      <soap:operation soapAction="http://tempuri.org/ClaimsService/deleteClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readVehicleFromClaim">
+      <soap:operation soapAction="http://tempuri.org/ClaimsService/readVehicleFromClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_ClaimsService" binding="tns:BasicHttpBinding_ClaimsService">
+      <soap:address location="http://localhost:50748/ClaimsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

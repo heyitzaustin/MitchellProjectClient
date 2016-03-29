@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="184398a4-d34e-445e-b714-6340b0b60525" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50748/ClaimsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ClaimsService.disco" MetadataType="Disco" ID="0c540223-70eb-44b2-b4c2-67af67acc7b9" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?disco" />
+    <MetadataFile FileName="ClaimsService.xsd" MetadataType="Schema" ID="8f6643c7-ddb9-47ee-b5fa-2f90b8b2bf81" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClaimsService1.xsd" MetadataType="Schema" ID="84b6dada-b583-41a2-97c8-f26bf756b66b" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ClaimsService2.xsd" MetadataType="Schema" ID="4c100d5b-d43a-444f-93ea-0cd19acdee0f" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="cc89aba0-e6b6-4983-a917-8c4bc55953c6" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
