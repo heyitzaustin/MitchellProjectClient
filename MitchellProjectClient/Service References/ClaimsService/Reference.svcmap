@@ -22,10 +22,11 @@
     <MetadataSource Address="http://localhost:50748/ClaimsService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ClaimsService.disco" MetadataType="Disco" ID="0c540223-70eb-44b2-b4c2-67af67acc7b9" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?disco" />
-    <MetadataFile FileName="ClaimsService.xsd" MetadataType="Schema" ID="8f6643c7-ddb9-47ee-b5fa-2f90b8b2bf81" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?xsd=xsd2" />
     <MetadataFile FileName="ClaimsService1.xsd" MetadataType="Schema" ID="84b6dada-b583-41a2-97c8-f26bf756b66b" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?xsd=xsd0" />
     <MetadataFile FileName="ClaimsService2.xsd" MetadataType="Schema" ID="4c100d5b-d43a-444f-93ea-0cd19acdee0f" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ClaimsService.xsd" MetadataType="Schema" ID="8f6643c7-ddb9-47ee-b5fa-2f90b8b2bf81" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClaimsService3.xsd" MetadataType="Schema" ID="44e8603b-8139-403c-9848-135731af8375" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ClaimsService.disco" MetadataType="Disco" ID="0c540223-70eb-44b2-b4c2-67af67acc7b9" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?disco" />
     <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="cc89aba0-e6b6-4983-a917-8c4bc55953c6" SourceId="1" SourceUrl="http://localhost:50748/ClaimsService.svc?wsdl" />
   </Metadata>
   <Extensions>

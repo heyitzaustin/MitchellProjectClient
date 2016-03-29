@@ -64,6 +64,9 @@
     <None Include="Service References\ClaimsService\ClaimsService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ClaimsService\ClaimsService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ClaimsService\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>

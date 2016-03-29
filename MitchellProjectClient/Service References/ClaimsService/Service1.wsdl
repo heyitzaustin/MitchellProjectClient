@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:50748/ClaimsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:50748/ClaimsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:50748/ClaimsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MitchellProject" />
+      <xsd:import schemaLocation="http://localhost:50748/ClaimsService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ClaimsService_CreateClaim_InputMessage">
@@ -49,6 +50,12 @@
   <wsdl:message name="ClaimsService_readVehicleFromClaim_OutputMessage">
     <wsdl:part name="parameters" element="tns:readVehicleFromClaimResponse" />
   </wsdl:message>
+  <wsdl:message name="ClaimsService_getClaimsInDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClaimsInDateRange" />
+  </wsdl:message>
+  <wsdl:message name="ClaimsService_getClaimsInDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClaimsInDateRangeResponse" />
+  </wsdl:message>
   <wsdl:portType name="ClaimsService">
     <wsdl:operation name="CreateClaim">
       <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/CreateClaim" message="tns:ClaimsService_CreateClaim_InputMessage" />
@@ -77,6 +84,10 @@
     <wsdl:operation name="readVehicleFromClaim">
       <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/readVehicleFromClaim" message="tns:ClaimsService_readVehicleFromClaim_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/readVehicleFromClaimResponse" message="tns:ClaimsService_readVehicleFromClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClaimsInDateRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ClaimsService/getClaimsInDateRange" message="tns:ClaimsService_getClaimsInDateRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ClaimsService/getClaimsInDateRangeResponse" message="tns:ClaimsService_getClaimsInDateRange_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ClaimsService" type="tns:ClaimsService">
@@ -137,6 +148,15 @@
     </wsdl:operation>
     <wsdl:operation name="readVehicleFromClaim">
       <soap:operation soapAction="http://tempuri.org/ClaimsService/readVehicleFromClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClaimsInDateRange">
+      <soap:operation soapAction="http://tempuri.org/ClaimsService/getClaimsInDateRange" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

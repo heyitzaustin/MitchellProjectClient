@@ -183,6 +183,12 @@ namespace MitchellProjectClient.ClaimsService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ClaimsService/readVehicleFromClaim", ReplyAction="http://tempuri.org/ClaimsService/readVehicleFromClaimResponse")]
         System.Threading.Tasks.Task<string> readVehicleFromClaimAsync(string claimnumber, string vehicle_vin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ClaimsService/getClaimsInDateRange", ReplyAction="http://tempuri.org/ClaimsService/getClaimsInDateRangeResponse")]
+        string[] getClaimsInDateRange(string startdate, string enddate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ClaimsService/getClaimsInDateRange", ReplyAction="http://tempuri.org/ClaimsService/getClaimsInDateRangeResponse")]
+        System.Threading.Tasks.Task<string[]> getClaimsInDateRangeAsync(string startdate, string enddate);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -266,6 +272,14 @@ namespace MitchellProjectClient.ClaimsService {
         
         public System.Threading.Tasks.Task<string> readVehicleFromClaimAsync(string claimnumber, string vehicle_vin) {
             return base.Channel.readVehicleFromClaimAsync(claimnumber, vehicle_vin);
+        }
+        
+        public string[] getClaimsInDateRange(string startdate, string enddate) {
+            return base.Channel.getClaimsInDateRange(startdate, enddate);
+        }
+        
+        public System.Threading.Tasks.Task<string[]> getClaimsInDateRangeAsync(string startdate, string enddate) {
+            return base.Channel.getClaimsInDateRangeAsync(startdate, enddate);
         }
     }
 }
